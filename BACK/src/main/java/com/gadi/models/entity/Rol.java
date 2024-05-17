@@ -4,7 +4,7 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="rol", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_rolS"})})
+@Table(name="rol", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_rol"})})
 public class Rol implements Serializable{
 
 	/**
