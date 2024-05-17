@@ -6,7 +6,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="ciclo", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_articulo","codigo"})})
+@Table(name="ciclo", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_ciclo"})})
 public class Ciclo implements Serializable{
 
 	/**

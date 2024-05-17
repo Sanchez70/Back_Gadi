@@ -21,12 +21,12 @@ public class Asignatura implements Serializable{
 	private String nombre_asignatura;
 	private int horas_semanales;
 	
-	private int id_carrera;
-	private int id_ciclo;
+	private Long id_carrera;
+	private Long id_ciclo;
 
 	@JoinColumn(name="id_asignatura")
-	private List<Distributivo>Distributivo;
-
+	private List<Distributivo_Asignatura>Distributivo_Asignatura;
+	
 	public Long getId_asignatura() {
 		return id_asignatura;
 	}
@@ -51,21 +51,23 @@ public class Asignatura implements Serializable{
 		this.horas_semanales = horas_semanales;
 	}
 
-	public int getId_carrera() {
+	public Long getId_carrera() {
 		return id_carrera;
 	}
 
-	public void setId_carrera(int id_carrera) {
+	public void setId_carrera(Long id_carrera) {
 		this.id_carrera = id_carrera;
 	}
 
-	public int getId_ciclo() {
+	public Long getId_ciclo() {
 		return id_ciclo;
 	}
 
-	public void setId_ciclo(int id_ciclo) {
+	public void setId_ciclo(Long id_ciclo) {
 		this.id_ciclo = id_ciclo;
 	}
+
+	
 	
 	
 }

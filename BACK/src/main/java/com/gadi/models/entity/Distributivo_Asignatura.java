@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="distributivo", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo","id_asignatura","id_jornada"})})
+@Table(name="distributivo_asignatura", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo_asig","id_distributivo","id_asignatura","id_jornada"})})
 public class Distributivo_Asignatura implements Serializable{
 
 	/**
