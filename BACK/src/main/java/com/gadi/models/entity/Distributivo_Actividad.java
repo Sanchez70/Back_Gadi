@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 @Entity
-@Table(name="tipo_actividad", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo_actividad","id_actividad","id_distributivo"})})
+@Table(name="distributivo_actividad", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo_actividad","id_actividad","id_distributivo"})})
 public class Distributivo_Actividad implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

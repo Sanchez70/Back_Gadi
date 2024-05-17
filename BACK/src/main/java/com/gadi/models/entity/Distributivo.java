@@ -6,7 +6,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="distributivo", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo","id_persona","id_asignatura","id_periodo"})})
+@Table(name="distributivo", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_distributivo","id_persona","id_periodo"})})
 public class Distributivo implements Serializable{
 
 	/**
@@ -17,36 +17,33 @@ public class Distributivo implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_distributivo;
-	private int id_persona;
-	private int id_asignatura;
-	private int id_periodo;
+	private Long id_persona;
+	private Long id_periodo;
 	
 	@JoinColumn(name="id_distributivo")
 	private List<Distributivo_Actividad>Distributivo_Actividad;
-	
+	@JoinColumn(name="id_distributivo")
+	private List<Distributivo_Asignatura>Distributivo_Asignatura;
+
 	public Long getId_distributivo() {
 		return id_distributivo;
 	}
 	public void setId_distributivo(Long id_distributivo) {
 		this.id_distributivo = id_distributivo;
 	}
-	public int getId_persona() {
+	public Long getId_persona() {
 		return id_persona;
 	}
-	public void setId_persona(int id_persona) {
+	public void setId_persona(Long id_persona) {
 		this.id_persona = id_persona;
 	}
-	public int getId_asignatura() {
-		return id_asignatura;
-	}
-	public void setId_asignatura(int id_asignatura) {
-		this.id_asignatura = id_asignatura;
-	}
-	public int getId_periodo() {
+
+	public Long getId_periodo() {
 		return id_periodo;
 	}
-	public void setId_periodo(int id_periodo) {
+	public void setId_periodo(Long id_periodo) {
 		this.id_periodo = id_periodo;
 	}
+
 
 }

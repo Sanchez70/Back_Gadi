@@ -2,6 +2,7 @@ package com.gadi.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -16,15 +17,19 @@ public class Periodo implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_periodo;
+	private Long id_periodo;
 	
 	private String nombre_periodo;
 	private Date inicio_periodo;
 	private Date fin_periodo;
-	public int getId_periodo() {
+	
+	@JoinColumn(name="id_periodo")
+	private List<Distributivo>Distributivo;
+	
+	public Long getId_periodo() {
 		return id_periodo;
 	}
-	public void setId_periodo(int id_periodo) {
+	public void setId_periodo(Long id_periodo) {
 		this.id_periodo = id_periodo;
 	}
 	public String getNombre_periodo() {

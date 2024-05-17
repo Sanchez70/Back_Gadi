@@ -1,6 +1,8 @@
 package com.gadi.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,15 +16,18 @@ public class Ciclo implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_ciclo;
+	private Long id_ciclo;
 	
 	private String nombre_ciclo;
 
-	public int getId_ciclo() {
+	@JoinColumn(name="id_ciclo")
+	private List<Asignatura>Asignatura;
+
+	public Long getId_ciclo() {
 		return id_ciclo;
 	}
 
-	public void setId_ciclo(int id_ciclo) {
+	public void setId_ciclo(Long id_ciclo) {
 		this.id_ciclo = id_ciclo;
 	}
 

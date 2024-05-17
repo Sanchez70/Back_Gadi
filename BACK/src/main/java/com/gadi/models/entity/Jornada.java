@@ -1,6 +1,8 @@
 package com.gadi.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,15 +16,17 @@ public class Jornada implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_jornada;
+	private Long id_jornada;
 	
 	private String descrip_jornada;
+	@JoinColumn(name="id_jornada")
+	private List<Distributivo_Asignatura>Distributivo_Asignatura;
 
-	public int getId_jornada() {
+	public Long getId_jornada() {
 		return id_jornada;
 	}
 
-	public void setId_jornada(int id_jornada) {
+	public void setId_jornada(Long id_jornada) {
 		this.id_jornada = id_jornada;
 	}
 

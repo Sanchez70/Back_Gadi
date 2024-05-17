@@ -1,11 +1,12 @@
 package com.gadi.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="asignatura", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_asignatura","id_carrera"})})
+@Table(name="asignatura", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_asignatura","id_carrera","id_ciclo"})})
 public class Asignatura implements Serializable{
 
 	/**
@@ -15,18 +16,22 @@ public class Asignatura implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_asignatura;
+	private Long id_asignatura;
 	
 	private String nombre_asignatura;
 	private int horas_semanales;
 	
 	private int id_carrera;
+	private int id_ciclo;
 
-	public int getId_asignatura() {
+	@JoinColumn(name="id_asignatura")
+	private List<Distributivo>Distributivo;
+
+	public Long getId_asignatura() {
 		return id_asignatura;
 	}
 
-	public void setId_asignatura(int id_asignatura) {
+	public void setId_asignatura(Long id_asignatura) {
 		this.id_asignatura = id_asignatura;
 	}
 
@@ -53,5 +58,14 @@ public class Asignatura implements Serializable{
 	public void setId_carrera(int id_carrera) {
 		this.id_carrera = id_carrera;
 	}
+
+	public int getId_ciclo() {
+		return id_ciclo;
+	}
+
+	public void setId_ciclo(int id_ciclo) {
+		this.id_ciclo = id_ciclo;
+	}
+	
 	
 }

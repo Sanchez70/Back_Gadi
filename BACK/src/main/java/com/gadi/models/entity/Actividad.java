@@ -20,7 +20,7 @@ public class Actividad implements Serializable{
 	private String nombre_Actividad;
 	private String descripcion_actividad;
 	private int horas_no_docentes;
-	private int id_tipo_actividad;
+	private Long id_tipo_actividad;
 	
 	@JoinColumn(name="id_actividad")
 	private List<Distributivo_Actividad>Distributivo_Actividad;
@@ -65,12 +65,14 @@ public class Actividad implements Serializable{
 		this.horas_no_docentes = horas_no_docentes;
 	}
 
-	public int getId_tipo_actividad() {
+	public Long getId_tipo_actividad() {
 		return id_tipo_actividad;
 	}
 
-	public void setId_tipo_actividad(int id_tipo_actividad) {
+	public void setId_tipo_actividad(Long id_tipo_actividad) {
 		this.id_tipo_actividad = id_tipo_actividad;
 	}
+
+
 	
 }
