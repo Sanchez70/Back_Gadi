@@ -24,9 +24,9 @@ public class Carrera implements Serializable{
 	private int horas_semanales;
 	private String codigo;
 	
-	
 	@JoinColumn(name="id_carrera")
 	private List<Asignatura>Asignatura;
+	
 	public Long getId_carrera() {
 		return id_carrera;
 	}

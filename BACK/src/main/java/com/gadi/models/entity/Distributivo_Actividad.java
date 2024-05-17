@@ -16,20 +16,27 @@ public class Distributivo_Actividad implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_distributivo_actividad;
-	private Integer id_distributivo;
-	private Integer id_actividad;
+	private Long id_distributivo;
+	private Long id_actividad;
 	private Integer hora_no_docente;
 	
-	public Integer getId_distributivo() {
+
+	public Long getId_distributivo_actividad() {
+		return id_distributivo_actividad;
+	}
+	public void setId_distributivo_actividad(Long id_distributivo_actividad) {
+		this.id_distributivo_actividad = id_distributivo_actividad;
+	}
+	public Long getId_distributivo() {
 		return id_distributivo;
 	}
-	public void setId_distributivo(Integer id_distributivo) {
+	public void setId_distributivo(Long id_distributivo) {
 		this.id_distributivo = id_distributivo;
 	}
-	public Integer getId_actividad() {
+	public Long getId_actividad() {
 		return id_actividad;
 	}
-	public void setId_actividad(Integer id_actividad) {
+	public void setId_actividad(Long id_actividad) {
 		this.id_actividad = id_actividad;
 	}
 	public Integer getHora_no_docente() {
