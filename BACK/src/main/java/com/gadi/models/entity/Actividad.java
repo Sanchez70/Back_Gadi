@@ -1,6 +1,7 @@
 package com.gadi.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -15,20 +16,29 @@ public class Actividad implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_actividad;
-	
+	private Long id_actividad;
 	private String nombre_Actividad;
 	private String descripcion_actividad;
 	private int horas_no_docentes;
-	
 	private int id_tipo_actividad;
+	
+	@JoinColumn(name="id_actividad")
+	private List<Distributivo_Actividad>Distributivo_Actividad;
 
-	public int getId_actividad() {
+	public Long getId_actividad() {
 		return id_actividad;
 	}
 
-	public void setId_actividad(int id_actividad) {
+	public void setId_actividad(Long id_actividad) {
 		this.id_actividad = id_actividad;
+	}
+
+	public List<Distributivo_Actividad> getDistributivo_Actividad() {
+		return Distributivo_Actividad;
+	}
+
+	public void setDistributivo_Actividad(List<Distributivo_Actividad> distributivo_Actividad) {
+		Distributivo_Actividad = distributivo_Actividad;
 	}
 
 	public String getNombre_Actividad() {
