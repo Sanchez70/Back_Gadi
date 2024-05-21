@@ -16,14 +16,15 @@ public class Tipo_Contrato implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_tipo_contrato;
+	private Long id_tipo_contrato;
 	
 	private String nombre_contrato;
 	private Date hora_contrato;
-	public int getId_tipo_contrato() {
+	
+	public Long getId_tipo_contrato() {
 		return id_tipo_contrato;
 	}
-	public void setId_tipo_contrato(int id_tipo_contrato) {
+	public void setId_tipo_contrato(Long id_tipo_contrato) {
 		this.id_tipo_contrato = id_tipo_contrato;
 	}
 	public String getNombre_contrato() {

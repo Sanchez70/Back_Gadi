@@ -14,15 +14,15 @@ public class Grado_Ocupacional implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_grado_ocp;
+	private Long id_grado_ocp;
 	
 	private String nombre_grado_ocp;
 
-	public int getId_grado_ocp() {
+	public Long getId_grado_ocp() {
 		return id_grado_ocp;
 	}
 
-	public void setId_grado_ocp(int id_grado_ocp) {
+	public void setId_grado_ocp(Long id_grado_ocp) {
 		this.id_grado_ocp = id_grado_ocp;
 	}
 

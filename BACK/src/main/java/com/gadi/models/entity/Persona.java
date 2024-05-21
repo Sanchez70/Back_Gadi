@@ -16,7 +16,7 @@ public class Persona implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_persona;
+	private Long id_persona;
 	
 	private String cedula;
 	private String nombre1;
@@ -29,13 +29,14 @@ public class Persona implements Serializable{
 	private int edad;
 	private Date fecha_vinculacion;
 	
-	private int id_contrato;
-	private int id_titulo;
-	private int id_grado;
-	public int getId_persona() {
+	private Long id_contrato;
+	private Long id_titulo;
+	private Long id_grado;
+	
+	public Long getId_persona() {
 		return id_persona;
 	}
-	public void setId_persona(int id_persona) {
+	public void setId_persona(Long id_persona) {
 		this.id_persona = id_persona;
 	}
 	public String getCedula() {
@@ -98,22 +99,22 @@ public class Persona implements Serializable{
 	public void setFecha_vinculacion(Date fecha_vinculacion) {
 		this.fecha_vinculacion = fecha_vinculacion;
 	}
-	public int getId_contrato() {
+	public Long getId_contrato() {
 		return id_contrato;
 	}
-	public void setId_contrato(int id_contrato) {
+	public void setId_contrato(Long id_contrato) {
 		this.id_contrato = id_contrato;
 	}
-	public int getId_titulo() {
+	public Long getId_titulo() {
 		return id_titulo;
 	}
-	public void setId_titulo(int id_titulo) {
+	public void setId_titulo(Long id_titulo) {
 		this.id_titulo = id_titulo;
 	}
-	public int getId_grado() {
+	public Long getId_grado() {
 		return id_grado;
 	}
-	public void setId_grado(int id_grado) {
+	public void setId_grado(Long id_grado) {
 		this.id_grado = id_grado;
 	}
 
