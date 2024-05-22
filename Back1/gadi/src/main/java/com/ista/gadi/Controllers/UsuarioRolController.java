@@ -22,17 +22,17 @@ public class UsuarioRolController {
 	@Autowired
 	private UsuarioRolService usuarioRolService;
 	
-	@GetMapping("/actividad")
+	@GetMapping("/usuarioRol")
 	public List<UsuarioRol> index(){
 		return usuarioRolService.findAll();
 	}
 	
-	@GetMapping("/actividad/{id}")
+	@GetMapping("/usuarioRol/{id}")
 	public UsuarioRol show(@PathVariable Long id) {
 		return usuarioRolService.findbyId(id);
 	}
 	
-	@PostMapping("/actividad")
+	@PostMapping("/usuarioRol")
 	@ResponseStatus(HttpStatus.CREATED)
 	public UsuarioRol create(@RequestBody UsuarioRol usuarioRol) {
 		return usuarioRolService.save(usuarioRol);
@@ -40,7 +40,7 @@ public class UsuarioRolController {
 	
 
 	
-	@DeleteMapping("/actividad/{id}")
+	@DeleteMapping("/usuarioRol/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 		usuarioRolService.delete(id);

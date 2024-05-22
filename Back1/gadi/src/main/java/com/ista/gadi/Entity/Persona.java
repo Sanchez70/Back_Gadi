@@ -37,6 +37,9 @@ public class Persona implements Serializable{
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_persona")
 	private List<Distributivo>Distributivo;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_persona")
+	private List<Usuario>Usuario;
 	public Long getId_persona() {
 		return id_persona;
 	}
