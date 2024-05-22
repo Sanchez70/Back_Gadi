@@ -2,6 +2,7 @@ package com.ista.gadi.Entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -20,6 +21,10 @@ public class Tipo_Contrato implements Serializable{
 	
 	private String nombre_contrato;
 	private Date hora_contrato;
+	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_tipo_contrato")
+	private List<Persona>Persona;
 	
 	public Long getId_tipo_contrato() {
 		return id_tipo_contrato;

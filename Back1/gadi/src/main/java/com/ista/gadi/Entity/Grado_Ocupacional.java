@@ -1,6 +1,8 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +19,9 @@ public class Grado_Ocupacional implements Serializable{
 	private Long id_grado_ocp;
 	
 	private String nombre_grado_ocp;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_grado_ocp")
+	private List<Persona>Persona;
 
 	public Long getId_grado_ocp() {
 		return id_grado_ocp;

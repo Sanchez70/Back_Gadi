@@ -1,6 +1,8 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -17,7 +19,9 @@ public class Rol implements Serializable{
 	private Long id_rol;
 	
 	private String nombre_rol;
-
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_rol")
+	private List<UsuarioRol>UsuarioRol;
 	public Long getId_rol() {
 		return id_rol;
 	}

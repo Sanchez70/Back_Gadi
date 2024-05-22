@@ -1,11 +1,12 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="usuario", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_usuario"})})
+@Table(name="usuario", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_usuario","id_persona"})})
 public class Usuario implements Serializable{
 
 	/**
@@ -19,7 +20,10 @@ public class Usuario implements Serializable{
 	
 	private String usuario;
 	private String contrasena;
-	
+	private Long id_persona;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_usuario")
+	private List<UsuarioRol>UsuarioRol;
 	public Long getId_usuario() {
 		return id_usuario;
 	}
@@ -37,6 +41,12 @@ public class Usuario implements Serializable{
 	}
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
+	}
+	public Long getId_persona() {
+		return id_persona;
+	}
+	public void setId_persona(Long id_persona) {
+		this.id_persona = id_persona;
 	}
 	
 }

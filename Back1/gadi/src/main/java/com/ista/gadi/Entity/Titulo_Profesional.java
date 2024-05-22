@@ -1,6 +1,7 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -19,7 +20,9 @@ public class Titulo_Profesional implements Serializable{
 	
 	private String nombre_titulo;
 	private int grado;
-	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_titulo_profesional")
+	private List<Persona>Persona;
 	public Long getId_titulo_profesional() {
 		return id_titulo_profesional;
 	}

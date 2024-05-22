@@ -2,6 +2,7 @@ package com.ista.gadi.Entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -33,6 +34,9 @@ public class Persona implements Serializable{
 	private Long id_titulo;
 	private Long id_grado;
 	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	@JoinColumn(name="id_persona")
+	private List<Distributivo>Distributivo;
 	public Long getId_persona() {
 		return id_persona;
 	}
