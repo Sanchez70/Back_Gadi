@@ -22,6 +22,7 @@ public class Actividad implements Serializable{
 	private int horas_no_docentes;
 	private Long id_tipo_actividad;
 	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_actividad")
 	private List<Distributivo_Actividad>Distributivo_Actividad;
 

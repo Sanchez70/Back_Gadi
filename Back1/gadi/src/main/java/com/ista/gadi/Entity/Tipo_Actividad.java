@@ -19,7 +19,7 @@ public class Tipo_Actividad implements Serializable{
 	private Long id_tipo_actividad;
 	
 	private String nom_tip_actividad;
-
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_tipo_actividad")
 	private List<Actividad>Actividad;
 	

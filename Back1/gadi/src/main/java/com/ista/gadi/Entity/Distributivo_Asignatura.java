@@ -3,6 +3,9 @@ package com.ista.gadi.Entity;
 import java.io.Serializable;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
@@ -14,11 +17,15 @@ public class Distributivo_Asignatura implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_distributivo_asig;
 	private Long id_distributivo;
 	private Long id_asignatura;
 	private String paralelo;
 	private Long id_jornada;
+	
+	
 	public Long getId_distributivo_asig() {
 		return id_distributivo_asig;
 	}

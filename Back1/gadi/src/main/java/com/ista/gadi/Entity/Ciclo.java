@@ -19,7 +19,7 @@ public class Ciclo implements Serializable{
 	private Long id_ciclo;
 	
 	private String nombre_ciclo;
-
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_ciclo")
 	private List<Asignatura>Asignatura;
 

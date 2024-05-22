@@ -19,6 +19,7 @@ public class Jornada implements Serializable{
 	private Long id_jornada;
 	
 	private String descrip_jornada;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_jornada")
 	private List<Distributivo_Asignatura>Distributivo_Asignatura;
 

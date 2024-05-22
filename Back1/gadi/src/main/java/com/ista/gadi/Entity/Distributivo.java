@@ -19,9 +19,10 @@ public class Distributivo implements Serializable{
 	private Long id_distributivo;
 	private Long id_persona;
 	private Long id_periodo;
-	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_distributivo")
 	private List<Distributivo_Actividad>Distributivo_Actividad;
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_distributivo")
 	private List<Distributivo_Asignatura>Distributivo_Asignatura;
 

@@ -23,7 +23,7 @@ public class Asignatura implements Serializable{
 	
 	private Long id_carrera;
 	private Long id_ciclo;
-
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_asignatura")
 	private List<Distributivo_Asignatura>Distributivo_Asignatura;
 	

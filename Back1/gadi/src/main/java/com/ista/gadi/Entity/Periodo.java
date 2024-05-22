@@ -23,6 +23,7 @@ public class Periodo implements Serializable{
 	private Date inicio_periodo;
 	private Date fin_periodo;
 	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_periodo")
 	private List<Distributivo>Distributivo;
 	

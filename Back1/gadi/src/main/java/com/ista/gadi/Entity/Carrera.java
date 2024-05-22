@@ -23,7 +23,7 @@ public class Carrera implements Serializable{
 	private Date fecha_inicio;
 	private int horas_semanales;
 	private String codigo;
-	
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_carrera")
 	private List<Asignatura>Asignatura;
 	
