@@ -21,6 +21,11 @@ public class Usuario implements Serializable{
 	private String usuario;
 	private String contrasena;
 	private Long id_persona;
+	
+	@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_carrera", referencedColumnName = "id_carrera")
+    private Carrera carrera;
+	
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_usuario")
 	private List<UsuarioRol>UsuarioRol;
