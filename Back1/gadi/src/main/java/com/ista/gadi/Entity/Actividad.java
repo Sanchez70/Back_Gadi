@@ -17,7 +17,7 @@ public class Actividad implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_actividad;
-	private String nombre_Actividad;
+	private String nombre_actividad;
 	private String descripcion_actividad;
 	private int horas_no_docentes;
 	private Long id_tipo_actividad;
@@ -42,12 +42,13 @@ public class Actividad implements Serializable{
 		Distributivo_Actividad = distributivo_Actividad;
 	}
 
-	public String getNombre_Actividad() {
-		return nombre_Actividad;
+
+	public String getNombre_actividad() {
+		return nombre_actividad;
 	}
 
-	public void setNombre_Actividad(String nombre_Actividad) {
-		this.nombre_Actividad = nombre_Actividad;
+	public void setNombre_actividad(String nombre_actividad) {
+		this.nombre_actividad = nombre_actividad;
 	}
 
 	public String getDescripcion_actividad() {
