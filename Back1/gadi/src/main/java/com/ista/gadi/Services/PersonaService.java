@@ -9,4 +9,5 @@ public interface PersonaService {
 	public Persona save(Persona persona);
 	public Persona findbyId(Long id);
 	public void delete(Long id);
+	Persona findByCedula(String cedula);
 }

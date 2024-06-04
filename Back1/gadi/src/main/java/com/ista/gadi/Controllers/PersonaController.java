@@ -35,6 +35,11 @@ public class PersonaController {
 		return personaService.findbyId(id);
 	}
 	
+	 @GetMapping("/persona/cedula/{cedula}")
+		public Persona showByCedula(@PathVariable String cedula) {
+		    return personaService.findByCedula(cedula);
+		}
+	
 	@PostMapping("/persona")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Persona create(@RequestBody Persona persona) {

@@ -36,5 +36,11 @@ public class Personalmpl implements PersonaService{
 		personaDao.deleteById(id);
 		
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Persona findByCedula(String cedula) {
+	    return personaDao.findByCedula(cedula);
+	}
 
 }
