@@ -47,7 +47,7 @@ public class ActividadController {
 		Actividad actividadActual = actividadService.findbyId(id);
 		actividadActual.setHoras_no_docentes(actividad.getHoras_no_docentes());
 		actividadActual.setId_tipo_actividad(actividad.getId_tipo_actividad());
-		actividadActual.setNombre_Actividad(actividad.getNombre_Actividad());
+		actividadActual.setNombre_actividad(actividad.getNombre_actividad());
 		actividadActual.setDescripcion_actividad(actividad.getDescripcion_actividad());
 		return actividadService.save(actividadActual);
 	}
