@@ -1,7 +1,7 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
-import java.util.Date;
+
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -20,7 +20,7 @@ public class Tipo_Contrato implements Serializable{
 	private Long id_tipo_contrato;
 	
 	private String nombre_contrato;
-	private Date hora_contrato;
+	private Integer hora_contrato;
 	
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_tipo_contrato")
@@ -38,12 +38,13 @@ public class Tipo_Contrato implements Serializable{
 	public void setNombre_contrato(String nombre_contrato) {
 		this.nombre_contrato = nombre_contrato;
 	}
-	public Date getHora_contrato() {
+	public Integer getHora_contrato() {
 		return hora_contrato;
 	}
-	public void setHora_contrato(Date hora_contrato) {
+	public void setHora_contrato(Integer hora_contrato) {
 		this.hora_contrato = hora_contrato;
 	}
+
 
 	
 }
