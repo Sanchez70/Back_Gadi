@@ -34,6 +34,11 @@ public class DistributivoController {
 		return distributivoService.findbyId(id);
 	}
 	
+	@GetMapping("/distributivo/persona/{idPersona}")
+    public Distributivo findByPersonaId(@PathVariable Long idPersona) {
+        return distributivoService.findByIdPersona(idPersona);
+    }
+	
 	@PostMapping("/distributivo")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Distributivo create(@RequestBody Distributivo distributivo) {

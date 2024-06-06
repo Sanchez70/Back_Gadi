@@ -11,4 +11,5 @@ public interface DistributivoService {
 	public Distributivo save(Distributivo distributivo);
 	public Distributivo findbyId(Long id);
 	public void delete(Long id);
+	Distributivo findByIdPersona(Long idPersona);
 }

@@ -35,12 +35,17 @@ public class UsuarioController {
 		return usuarioService.findbyId(id);
 	}
 	
+	@GetMapping("/usuario/persona/{idPersona}")
+    public Usuario findByPersonaId(@PathVariable Long idPersona) {
+        return usuarioService.findByIdPersona(idPersona);
+    }
+	
 	@PostMapping("/usuario")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario create(@RequestBody Usuario usuario) {
 		return usuarioService.save(usuario);
 	}
-	
+
 	@PutMapping("/usuario/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario update(@RequestBody Usuario usuario, @PathVariable Long id) {

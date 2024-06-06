@@ -37,5 +37,11 @@ public class Usuariolmpl implements UsuarioService{
 		usuarioDao.deleteById(id);
 		
 	}
+	
+	 @Override
+	    @Transactional(readOnly = true)
+	    public Usuario findByIdPersona(Long idPersona) {
+	        return usuarioDao.findByIdPersona(idPersona).orElse(null);
+	    }
 
 }

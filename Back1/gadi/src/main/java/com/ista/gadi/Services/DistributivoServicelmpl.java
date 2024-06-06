@@ -39,4 +39,9 @@ public class DistributivoServicelmpl implements DistributivoService {
 		distributivoDao.deleteById(id);
 	}
 
+	@Override
+	public Distributivo findByIdPersona(Long idPersona) {
+		return distributivoDao.findByIdPersona(idPersona).orElse(null);
+	}
+
 }
