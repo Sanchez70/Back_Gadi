@@ -7,7 +7,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="persona", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_persona","cedula","id_contrato","id_titulo","id_grado"})})
+@Table(name="persona", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_persona","cedula","id_tipo_contrato","id_titulo_profesional","id_grado_ocp"})})
 public class Persona implements Serializable{
 
 	/**
@@ -30,9 +30,9 @@ public class Persona implements Serializable{
 	private int edad;
 	private Date fecha_vinculacion;
 	
-	private Long id_contrato;
-	private Long id_titulo;
-	private Long id_grado;
+	private Long id_tipo_contrato;
+	private Long id_titulo_profesional;
+	private Long id_grado_ocp;
 	
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_persona")
@@ -106,23 +106,26 @@ public class Persona implements Serializable{
 	public void setFecha_vinculacion(Date fecha_vinculacion) {
 		this.fecha_vinculacion = fecha_vinculacion;
 	}
-	public Long getId_contrato() {
-		return id_contrato;
+
+	
+	public Long getId_titulo_profesional() {
+		return id_titulo_profesional;
 	}
-	public void setId_contrato(Long id_contrato) {
-		this.id_contrato = id_contrato;
+	public void setId_titulo_profesional(Long id_titulo_profesional) {
+		this.id_titulo_profesional = id_titulo_profesional;
 	}
-	public Long getId_titulo() {
-		return id_titulo;
+	public Long getId_grado_ocp() {
+		return id_grado_ocp;
 	}
-	public void setId_titulo(Long id_titulo) {
-		this.id_titulo = id_titulo;
+	public void setId_grado_ocp(Long id_grado_ocp) {
+		this.id_grado_ocp = id_grado_ocp;
 	}
-	public Long getId_grado() {
-		return id_grado;
+	public Long getId_tipo_contrato() {
+		return id_tipo_contrato;
 	}
-	public void setId_grado(Long id_grado) {
-		this.id_grado = id_grado;
+	public void setId_tipo_contrato(Long id_tipo_contrato) {
+		this.id_tipo_contrato = id_tipo_contrato;
 	}
+	
 
 }
