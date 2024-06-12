@@ -22,7 +22,7 @@ public class Usuario implements Serializable{
 	private String contrasena;
 	private Long id_persona;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_carrera", referencedColumnName = "id_carrera")
     private Carrera carrera;
 	
@@ -53,5 +53,13 @@ public class Usuario implements Serializable{
 	public void setId_persona(Long id_persona) {
 		this.id_persona = id_persona;
 	}
+	public Carrera getCarrera() {
+		return carrera;
+	}
+	public void setCarrera(Carrera carrera) {
+		this.carrera = carrera;
+	}
+	
+	
 	
 }
