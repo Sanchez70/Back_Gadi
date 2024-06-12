@@ -34,8 +34,7 @@ public class ActividadServicelmpl implements ActividadService{
 
 	@Override
 	public void delete(Long id) {
-		actividaDao.deleteById(id);
-		
+		actividaDao.deleteById(id);	
 	}
 
 }
