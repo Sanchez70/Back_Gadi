@@ -1,5 +1,6 @@
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Coordinador');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Director');
+INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Docente');
 INSERT INTO `titulo_profesional` (`grado`, `id_titulo_profesional`, `nombre_titulo`) VALUES ('3', NULL, 'Tecnologico');
 INSERT INTO `grado_ocupacional` (`id_grado_ocp`, `nombre_grado_ocp`) VALUES (NULL, 'S6');
 INSERT INTO `tipo_contrato` (`hora_contrato`, `id_tipo_contrato`, `nombre_contrato`) VALUES ('1', NULL, 'TC');
@@ -9,6 +10,7 @@ INSERT INTO `usuario` (`id_persona`, `id_usuario`, `contrasena`, `usuario`) VALU
 INSERT INTO `usuario` (`id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES (NULL, NULL, '123', 'edisson');
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '1', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '1', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('3', '2', NULL);
 -- CARRERAS REGISTRADAS --
 INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`, `nombre_carrera`) VALUES (30, '2024-06-01', 1, 'TUDS', 'TECNOLOGÍA SUPERIOR UNIVERSITARIA EN DESARROLLO DE SOFTWARE');
 INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`, `nombre_carrera`) VALUES (30, '2024-06-01', 2, 'TDS', 'TECNOLOGÍA SUPERIOR EN DESARROLLO DE SOFTWARE');
