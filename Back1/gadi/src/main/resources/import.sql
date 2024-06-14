@@ -3,6 +3,11 @@ INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Director');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Docente');
 INSERT INTO `titulo_profesional` (`grado`, `id_titulo_profesional`, `nombre_titulo`) VALUES ('3', NULL, 'Tecnologico');
 INSERT INTO `grado_ocupacional` (`id_grado_ocp`, `nombre_grado_ocp`) VALUES (NULL, 'S6');
+-- Tipo Contratos --
+INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('TIEMPO COMPLETO',40);
+INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('MEDIO TIEMPO',20);
+INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('TIEMPO PARCIAL',NULL);
+-- PERSONA Y usuario--
 INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`, `id_tipo_contrato`, `id_titulo_profesional`, `apellido1`, `apellido2`, `cedula`, `correo`, `direccion`, `nombre1`, `nombre2`, `telefono`) VALUES ('21', '2024-06-04 20:15:08.000000', '1', NULL, '1', '1', 'Sanchez', 'Medina', '1104337389', 'kevin@gmail.com', 'kmdckd', 'Kevin', 'Alexander', '099363846');
 INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES (NULL, '1', NULL, '123', 'kevin');
 INSERT INTO `usuario` (`id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES (NULL, NULL, '123', 'jean');
@@ -52,8 +57,12 @@ INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_c
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2','3','1','1','Química');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('3','4','1','1','Biología');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('5','5','1','1','Programación');
+--- Periodos academicos---
+INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`) VALUES ('2024-12-31', '1', '2024-01-01', 'Periodo 2024');
+INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`)  VALUES ('2025-12-31', '2', '2025-01-01', 'Periodo 2025');
+INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`)  VALUES ('2026-12-31', '3', '2026-01-01', 'Periodo 2026');
 
--- Tipo Contratos --
-INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('TIEMPO COMPLETO',40);
-INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('MEDIO TIEMPO',20);
-INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('TIEMPO PARCIAL',NULL);
+--JORNADAS ACADEMICAS ---
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('1', 'Jornada Matutina');
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('2', 'Jornada Vespertina');
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('3', 'Jornada Nocturna');
