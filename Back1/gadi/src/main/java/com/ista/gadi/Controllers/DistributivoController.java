@@ -51,6 +51,7 @@ public class DistributivoController {
 		Distributivo distributivoActual = distributivoService.findbyId(id);
 		distributivoActual.setId_periodo(distributivo.getId_periodo());
 		distributivoActual.setId_persona(distributivo.getId_persona());
+		distributivoActual.setEstado(distributivo.getEstado());
 		return distributivoService.save(distributivoActual);
 	}
 	

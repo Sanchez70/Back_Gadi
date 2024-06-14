@@ -19,6 +19,7 @@ public class Distributivo implements Serializable{
 	private Long id_distributivo;
 	private Long id_persona;
 	private Long id_periodo;
+	private String estado;
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_distributivo")
 	private List<Distributivo_Actividad>Distributivo_Actividad;
@@ -44,6 +45,12 @@ public class Distributivo implements Serializable{
 	}
 	public void setId_periodo(Long id_periodo) {
 		this.id_periodo = id_periodo;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 
