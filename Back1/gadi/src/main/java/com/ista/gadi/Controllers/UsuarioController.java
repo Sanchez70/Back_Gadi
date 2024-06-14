@@ -52,6 +52,7 @@ public class UsuarioController {
 		Usuario usuarioActual = usuarioService.findbyId(id);
 		usuarioActual.setContrasena(usuario.getContrasena());
 		usuarioActual.setUsuario(usuario.getUsuario());
+		usuarioActual.setCarrera(usuario.getCarrera());
 		return usuarioService.save(usuarioActual);
 	}
 	
