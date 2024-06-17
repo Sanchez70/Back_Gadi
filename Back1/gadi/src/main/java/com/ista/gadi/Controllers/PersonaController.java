@@ -59,7 +59,6 @@ public class PersonaController {
 		personaActual.setFecha_vinculacion(persona.getFecha_vinculacion());
 		personaActual.setId_tipo_contrato(persona.getId_tipo_contrato());
 		personaActual.setId_grado_ocp(persona.getId_grado_ocp());
-		personaActual.setId_titulo_profesional(persona.getId_titulo_profesional());
 		personaActual.setNombre1(persona.getNombre1());
 		personaActual.setNombre2(persona.getNombre2());
 		personaActual.setTelefono(persona.getTelefono());
