@@ -1,6 +1,7 @@
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Coordinador');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Director');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Docente');
+
 INSERT INTO `titulo_profesional` (`grado`, `id_titulo_profesional`, `nombre_titulo`) VALUES ('3', NULL, 'Tecnologico');
 INSERT INTO `grado_ocupacional` (`id_grado_ocp`, `nombre_grado_ocp`) VALUES (NULL, 'S6');
 -- Tipo Contratos --
@@ -9,6 +10,8 @@ INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('MEDIO TI
 INSERT INTO `tipo_contrato`(`nombre_contrato`,`hora_contrato`) VALUES ('TIEMPO PARCIAL',NULL);
 -- PERSONA Y usuario--
 INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`, `id_tipo_contrato`, `apellido1`, `apellido2`, `cedula`, `correo`, `direccion`, `nombre1`, `nombre2`, `telefono`) VALUES ('21', '2024-06-04 20:15:08.000000', '1', NULL, '1',  'Sanchez', 'Medina', '1104337389', 'kevin@gmail.com', 'kmdckd', 'Kevin', 'Alexander', '099363846');
+INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`, `id_tipo_contrato`, `apellido1`, `apellido2`, `cedula`, `correo`, `direccion`, `nombre1`, `nombre2`, `telefono`) VALUES ('21', '2024-06-04 20:15:08.000000', '1', NULL, '2',  'Leon', 'Marquez', '0107971244', 'edisson@gmail.com', 'kmdckd', 'Edisson', 'Fabian', '099363846');
+INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`, `id_tipo_contrato`, `apellido1`, `apellido2`, `cedula`, `correo`, `direccion`, `nombre1`, `nombre2`, `telefono`) VALUES ('21', '2024-06-04 20:15:08.000000', '1', NULL, '3',  'Medina', 'Maldonado', '1234567890', 'jean@gmail.com', 'kmdckd', 'Jean', 'Sebastian', '099363846');
 
 
 
@@ -44,9 +47,12 @@ INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`
 INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`, `nombre_carrera`) VALUES (30, '2024-06-01', 24, 'TAS', 'TECNOLOGÍA EN ANÁLISIS DE SISTEMAS');
 
 --- Ingresar Ciclos ---
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('1','Ciclo 1');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('2','Ciclo 2');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','Ciclo 3');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('1','PRIMERO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('2','SEGUNDO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','TERCERO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','CUARTO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','QUINTO');
+
 -- ASIGNATURAS REGISTRADAS --
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('3','1','1','1','Matemáticas');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('4','2','1','1','Física');
@@ -63,14 +69,22 @@ INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('1', 'Jornada Ma
 INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('2', 'Jornada Vespertina');
 INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('3', 'Jornada Nocturna');
 
-
 INSERT INTO `distributivo` (`id_distributivo`, `id_periodo`, `id_persona`, `estado`) VALUES (NULL, '1', '1', 'Pendiente');
+
 INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('1', '1', NULL, '123', 'kevin');
-INSERT INTO `usuario` (`id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES (NULL, NULL, '123', 'jean');
-INSERT INTO `usuario` (`id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES (NULL, NULL, '123', 'edisson');
+INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('2', '2', NULL, '12', 'edisson')
+INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('3', '3', NULL, '1234', 'jean');
+---USUARIO MASTER ---
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '1', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '1', NULL);
-INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('3', '2', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('3', '1', NULL);
+---USUARIOS CON ROL --
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '2', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '2', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '3', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '3', NULL);
+
+
 INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '1', 'Planificacion', 'Planificacion');
 INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '1', '1', NULL);
 INSERT INTO `distributivo_asignatura` (`id_asignatura`, `id_distributivo`, `id_distributivo_asig`, `id_jornada`, `paralelo`) VALUES ('1', '1', NULL, '1', 'A');
