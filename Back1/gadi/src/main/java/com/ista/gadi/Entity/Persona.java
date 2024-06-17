@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "persona", uniqueConstraints = { @UniqueConstraint(columnNames = { "id_persona", "cedula",
-		"id_tipo_contrato", "id_titulo_profesional", "id_grado_ocp" }) })
+		"id_tipo_contrato", "id_grado_ocp" }) })
 public class Persona implements Serializable {
 
 	/**
@@ -30,9 +30,7 @@ public class Persona implements Serializable {
 	private String correo;
 	private int edad;
 	private Date fecha_vinculacion;
-
 	private Long id_tipo_contrato;
-	private Long id_titulo_profesional;
 	private Long id_grado_ocp;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -133,13 +131,6 @@ public class Persona implements Serializable {
 		this.fecha_vinculacion = fecha_vinculacion;
 	}
 
-	public Long getId_titulo_profesional() {
-		return id_titulo_profesional;
-	}
-
-	public void setId_titulo_profesional(Long id_titulo_profesional) {
-		this.id_titulo_profesional = id_titulo_profesional;
-	}
 
 	public Long getId_grado_ocp() {
 		return id_grado_ocp;

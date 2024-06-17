@@ -6,7 +6,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="titulo_profesional", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_titulo_profesional"})})
+@Table(name="titulo_profesional", uniqueConstraints= {@UniqueConstraint(columnNames= {"id_titulo_profesional","id_persona"})})
 public class Titulo_Profesional implements Serializable{
 
 	/**
@@ -20,9 +20,13 @@ public class Titulo_Profesional implements Serializable{
 	
 	private String nombre_titulo;
 	private int grado;
-	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="id_titulo_profesional")
-	private List<Persona>Persona;
+	private Long id_persona;
+	public Long getId_persona() {
+		return id_persona;
+	}
+	public void setId_persona(Long id_persona) {
+		this.id_persona = id_persona;
+	}
 	public Long getId_titulo_profesional() {
 		return id_titulo_profesional;
 	}
