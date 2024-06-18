@@ -47,11 +47,11 @@ INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`
 INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`, `nombre_carrera`) VALUES (30, '2024-06-01', 24, 'TAS', 'TECNOLOGÍA EN ANÁLISIS DE SISTEMAS');
 
 --- Ingresar Ciclos ---
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('1','PRIMERO');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('2','SEGUNDO');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','TERCERO');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','CUARTO');
-INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES ('3','QUINTO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES (NULL,'PRIMERO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES (NULL,'SEGUNDO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES (NULL,'TERCERO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES (NULL,'CUARTO');
+INSERT INTO `ciclo`(`id_ciclo`, `nombre_ciclo`) VALUES (NULL,'QUINTO');
 
 -- ASIGNATURAS REGISTRADAS --
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('3','1','1','1','Matemáticas');
@@ -93,7 +93,7 @@ INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad
 
 INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '1', '1', NULL);
 INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '2', '2', NULL);
-INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '3', '2', NULL);
+INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '2', '2', NULL);
 
 INSERT INTO `distributivo_asignatura` (`id_asignatura`, `id_distributivo`, `id_distributivo_asig`, `id_jornada`, `paralelo`) VALUES ('1', '1', NULL, '1', 'A');
 INSERT INTO `distributivo_asignatura` (`id_asignatura`, `id_distributivo`, `id_distributivo_asig`, `id_jornada`, `paralelo`) VALUES ('2', '2', NULL, '1', 'A');
