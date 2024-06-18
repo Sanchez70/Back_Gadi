@@ -87,6 +87,7 @@ INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1'
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '3', NULL);
 
 
+
 INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '1', 'Planificacion', 'Planificacion');
 INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '2', 'Tutorias', 'Tutorias');
 
