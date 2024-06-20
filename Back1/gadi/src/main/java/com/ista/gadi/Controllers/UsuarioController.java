@@ -2,6 +2,7 @@ package com.ista.gadi.Controllers;
 
 import java.util.List;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -50,7 +51,12 @@ public class UsuarioController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario update(@RequestBody Usuario usuario, @PathVariable Long id) {
 		Usuario usuarioActual = usuarioService.findbyId(id);
-		usuarioActual.setContrasena(usuario.getContrasena());
+
+		// Verificar_si la_contraseña ha_cambiado
+		if (usuario.getContrasena() != null && !usuario.getContrasena().equals(usuarioActual.getContrasena())) {
+			// Encriptar_la_contraseña
+			usuarioActual.setContrasena(BCrypt.hashpw(usuario.getContrasena(), BCrypt.gensalt()));
+		}
 		usuarioActual.setUsuario(usuario.getUsuario());
 		usuarioActual.setCarrera(usuario.getCarrera());
 		return usuarioService.save(usuarioActual);
