@@ -1,6 +1,7 @@
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Coordinador');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Director');
 INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Docente');
+INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES (NULL, 'Administrador');
 
 INSERT INTO `titulo_profesional` (`grado`, `id_titulo_profesional`, `nombre_titulo`) VALUES ('3', NULL, 'Tecnologico');
 INSERT INTO `grado_ocupacional` (`id_grado_ocp`, `nombre_grado_ocp`) VALUES (NULL, 'S6');
@@ -73,8 +74,8 @@ INSERT INTO `distributivo` (`id_distributivo`, `id_periodo`, `id_persona`, `esta
 INSERT INTO `distributivo` (`id_distributivo`, `id_periodo`, `id_persona`, `estado`) VALUES (NULL, '2', '2', 'Pendiente');
 
 INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('1', '1', NULL, '$2a$10$I0u5UeJ9poZIvu1b9Wevg./z5cQc3bWXkY0c1eh5VEl2waT3V6ANC', 'kevin');
-INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('2', '2', NULL, '123', 'edisson')
-INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('3', '3', NULL, '123', 'jean');
+INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('2', '2', NULL, '$2a$10$I0u5UeJ9poZIvu1b9Wevg./z5cQc3bWXkY0c1eh5VEl2waT3V6ANC', 'edisson')
+INSERT INTO `usuario` (`id_carrera`, `id_persona`, `id_usuario`, `contrasena`, `usuario`) VALUES ('3', '3', NULL, '$2a$10$I0u5UeJ9poZIvu1b9Wevg./z5cQc3bWXkY0c1eh5VEl2waT3V6ANC', 'jean');
 ---USUARIO MASTER ---
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '1', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '1', NULL);
@@ -84,6 +85,7 @@ INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1'
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '2', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1', '3', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '3', NULL);
+INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('4', '1', NULL);
 
 
 
