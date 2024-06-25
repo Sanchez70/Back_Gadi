@@ -1,7 +1,6 @@
 package com.ista.gadi.Entity;
 
 import java.io.Serializable;
-import java.util.List;
 
 import jakarta.persistence.*;
 
@@ -19,7 +18,7 @@ public class Titulo_Profesional implements Serializable{
 	private Long id_titulo_profesional;
 	
 	private String nombre_titulo;
-	private int grado;
+	private String grado;
 	private Long id_persona;
 	public Long getId_persona() {
 		return id_persona;
@@ -39,11 +38,11 @@ public class Titulo_Profesional implements Serializable{
 	public void setNombre_titulo(String nombre_titulo) {
 		this.nombre_titulo = nombre_titulo;
 	}
-	public int getGrado() {
+	public String getGrado() {
 		return grado;
 	}
-	public void setGrado(int grado) {
+	public void setGrado(String grado) {
 		this.grado = grado;
 	}
-
+	
 }
