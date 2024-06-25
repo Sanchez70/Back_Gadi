@@ -36,6 +36,11 @@ public class Titulo_ProfecionalController {
 		return tituloProfecionalService.findbyId(id);
 	}
 	
+	@GetMapping("/titulo_profesional/persona/{idPersona}")
+    public List<Titulo_Profesional> findByPersonaId(@PathVariable Long idPersona) {
+        return tituloProfecionalService.findByIdPersona(idPersona);
+    }
+	
 	@PostMapping("/titulo_profesional")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Titulo_Profesional create(@RequestBody Titulo_Profesional tituloProfesional) {
@@ -56,4 +61,5 @@ public class Titulo_ProfecionalController {
 	public void delete(@PathVariable Long id) {
 		tituloProfecionalService.delete(id);
 	}
+	
 }

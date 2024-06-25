@@ -36,5 +36,10 @@ public class Titulo_Profecionallmpl implements Titulo_ProfecionalService{
 		tituloProfesionalDao.deleteById(id);
 		
 	}
-
+	
+	 @Override
+	    @Transactional(readOnly = true)
+	    public List<Titulo_Profesional> findByIdPersona(Long idPersona) {
+	        return tituloProfesionalDao.findByIdPersona(idPersona);
+	    }
 }

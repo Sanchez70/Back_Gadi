@@ -9,5 +9,5 @@ public interface Titulo_ProfecionalService {
 	public Titulo_Profesional save(Titulo_Profesional tituloProfesional);
 	public Titulo_Profesional findbyId(Long id);
 	public void delete(Long id);
-	
+	public List<Titulo_Profesional> findByIdPersona(Long idPersona);
 }
