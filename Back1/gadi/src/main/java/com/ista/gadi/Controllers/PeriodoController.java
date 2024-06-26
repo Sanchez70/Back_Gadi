@@ -48,6 +48,7 @@ public class PeriodoController {
 		periodoActual.setFin_periodo(periodo.getFin_periodo());
 		periodoActual.setInicio_periodo(periodo.getInicio_periodo());
 		periodoActual.setNombre_periodo(periodo.getNombre_periodo());
+		periodoActual.setEstado(periodo.getEstado());
 		return periodoService.save(periodoActual);
 	}
 	

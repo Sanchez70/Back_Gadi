@@ -22,6 +22,7 @@ public class Periodo implements Serializable{
 	private String nombre_periodo;
 	private Date inicio_periodo;
 	private Date fin_periodo;
+	private String estado;
 	
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="id_periodo")
@@ -50,6 +51,12 @@ public class Periodo implements Serializable{
 	}
 	public void setFin_periodo(Date fin_periodo) {
 		this.fin_periodo = fin_periodo;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 }
