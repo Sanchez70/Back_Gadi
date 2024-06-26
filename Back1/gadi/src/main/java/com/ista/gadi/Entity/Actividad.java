@@ -19,7 +19,7 @@ public class Actividad implements Serializable{
 	private Long id_actividad;
 	private String nombre_actividad;
 	private String descripcion_actividad;
-	private int horas_no_docentes;
+	private Integer horas_no_docentes;
 	private Long id_tipo_actividad;
 	
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
