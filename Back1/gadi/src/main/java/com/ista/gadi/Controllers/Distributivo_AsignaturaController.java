@@ -49,6 +49,7 @@ public class Distributivo_AsignaturaController {
 		distributivoAsignaturaActual.setId_asignatura(distributivoAsignatura.getId_asignatura());
 		distributivoAsignaturaActual.setId_distributivo(distributivoAsignatura.getId_distributivo());
 		distributivoAsignaturaActual.setId_jornada(distributivoAsignatura.getId_jornada());
+		distributivoAsignaturaActual.setAcronimo(distributivoAsignatura.getAcronimo());
 		return distributivoAsignaturaService.save(distributivoAsignaturaActual);
 	}
 	

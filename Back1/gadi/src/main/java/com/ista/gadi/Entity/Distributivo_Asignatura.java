@@ -24,7 +24,7 @@ public class Distributivo_Asignatura implements Serializable{
 	private Long id_asignatura;
 	private String paralelo;
 	private Long id_jornada;
-	
+	private String acronimo;
 	
 	public Long getId_distributivo_asig() {
 		return id_distributivo_asig;
@@ -56,6 +56,14 @@ public class Distributivo_Asignatura implements Serializable{
 	public void setId_jornada(Long id_jornada) {
 		this.id_jornada = id_jornada;
 	}
+	public String getAcronimo() {
+		return acronimo;
+	}
+	public void setAcronimo(String acronimo) {
+		this.acronimo = acronimo;
+	}
+	
+	
 	
 
 }
