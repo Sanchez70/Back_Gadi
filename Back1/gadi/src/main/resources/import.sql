@@ -24,9 +24,21 @@ INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`
 INSERT INTO `persona` (`edad`, `fecha_vinculacion`, `id_grado_ocp`, `id_persona`, `id_tipo_contrato`, `apellido1`, `apellido2`, `cedula`, `correo`, `direccion`, `nombre1`, `nombre2`, `telefono`) VALUES ('21', '2024-06-04 20:15:08.000000', '1', NULL, '3',  'Medina', 'Maldonado', '1234567890', 'jean@gmail.com', 'kmdckd', 'Jean', 'Sebastian', '099363846');
 
 -- TIPO DE ACTIVIDADES --
-INSERT INTO `tipo_actividad`(`id_tipo_actividad`, `nom_tip_actividad`) VALUES ('1','Actividad1');
-INSERT INTO `tipo_actividad`(`id_tipo_actividad`, `nom_tip_actividad`) VALUES ('2','Actividad2');
-INSERT INTO `tipo_actividad`(`id_tipo_actividad`, `nom_tip_actividad`) VALUES ('3','Actividad3');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Administrativas');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Jefes');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Operativas');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Gerenciales');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Financieras');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Marketing');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Recursos Humanos');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Logística');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Compras');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Ventas');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ( 'Atención al Cliente');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ( 'Investigación y Desarrollo');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Producción');
+INSERT INTO `tipo_actividad`(`nom_tip_actividad`) VALUES ('Calidad');
+
 
 -- CARRERAS REGISTRADAS --
 INSERT INTO `carrera` (`horas_semanales`, `fecha_inicio`, `id_carrera`, `codigo`, `nombre_carrera`) VALUES (30, '2024-06-01', 1, 'TUDS', 'TECNOLOGÍA SUPERIOR UNIVERSITARIA EN DESARROLLO DE SOFTWARE');
@@ -151,10 +163,22 @@ INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('1'
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('2', '3', NULL);
 INSERT INTO `usuario_rol` (`id_rol`, `id_usuario`, `id_usuario_rol`) VALUES ('4', '1', NULL);
 
+--Actividades--
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '1', 'Organización de documentos y reuniones administrativas', 'Administración');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('8', NULL, '2', 'Coordinación de equipos y toma de decisiones estratégicas', 'Gestión de Jefes');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('7', NULL, '3', 'Ejecución de tareas operativas diarias', 'Operaciones');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('6', NULL, '4', 'Supervisión de equipos y planificación gerencial', 'Gerencia');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('9', NULL, '5', 'Análisis financiero y gestión de presupuestos', 'Finanzas');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '6', 'Desarrollo de estrategias de marketing y publicidad', 'Marketing');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('4', NULL, '7', 'Gestión de personal y desarrollo organizacional', 'Recursos Humanos');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('6', NULL, '8', 'Coordinación y gestión de la cadena de suministro', 'Logística');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('7', NULL, '9', 'Proceso de adquisición de bienes y servicios', 'Compras');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('8', NULL, '10', 'Desarrollo y ejecución de estrategias de ventas', 'Ventas');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '11', 'Atención y resolución de consultas de clientes', 'Atención al Cliente');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('10', NULL, '12', 'Desarrollo de nuevos productos e innovaciones', 'Investigación y Desarrollo');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('8', NULL, '13', 'Fabricación y ensamblaje de productos', 'Producción');
+INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('6', NULL, '14', 'Inspección y aseguramiento de la calidad', 'Control de Calidad');
 
-
-INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '1', 'Planificacion', 'Planificacion');
-INSERT INTO `actividad` (`horas_no_docentes`, `id_actividad`, `id_tipo_actividad`, `descripcion_actividad`, `nombre_actividad`) VALUES ('5', NULL, '2', 'Tutorias', 'Tutorias');
 
 INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '1', '1', NULL);
 INSERT INTO `distributivo_actividad` (`hora_no_docente`, `id_actividad`, `id_distributivo`, `id_distributivo_actividad`) VALUES ('12', '2', '2', NULL);
