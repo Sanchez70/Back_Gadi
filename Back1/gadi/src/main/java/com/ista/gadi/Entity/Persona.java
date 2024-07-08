@@ -42,7 +42,10 @@ public class Persona implements Serializable {
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_persona")
 	private List<Titulo_Profesional> titulos;
-
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_persona")
+	private List<Rector> rector;
+	
 	public Long getId_persona() {
 		return id_persona;
 	}
