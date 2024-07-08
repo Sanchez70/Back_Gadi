@@ -1,6 +1,8 @@
 package com.ista.gadi.Services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +26,10 @@ public class RectorServicelmpl implements RectorService{
 		// TODO Auto-generated method stub
 		return rectorDao.findById(id).orElse(null);
 	}
+
+	@Override
+	public List<Rector> findAll() {
+		// TODO Auto-generated method stub
+		return (List<Rector>) rectorDao.findAll();	}
 
 }
