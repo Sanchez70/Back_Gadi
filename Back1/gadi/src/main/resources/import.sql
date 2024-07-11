@@ -129,6 +129,8 @@ INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_c
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'1','1','Programación orientada a objetos');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'1','1','Formulación de proyectos - Titulación');
 
+
+
 -- AIGNATURAS REGISTRADAS TSBG 1 --
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'3','1','Introducción a Big Data');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'3','1','Ofimática');
@@ -136,15 +138,99 @@ INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_c
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'3','1','Matemática');
 INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'3','1','Fundamentos de estadística');
 
+
+--ASIGNATURAS REGISTRADAS TSCS 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'4','1','Fundamentos de Ciberseguridad');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'4','1','Sistemas Operativos');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'4','1','Ofimática');
+
+--ASIGNATURAS REGISTRADAS TSMI 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'5','1','Fundamentos de estadística');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'5','1','Fundamentos de estadística');
+
+--ASIGNATURAS REGISTRADAS TDI 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'6','2','Estimulación temprana II');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'6','2','Comunicación acertiva');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'6','2','Salud y Nutrición');
+
+--ASIGNATURAS REGISTRADAS TSED 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'7','1','Estadística básica');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'7','1','Expresión oral y escrita');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'7','1','Anatomía del deporte');
+
+--ASIGNATURAS REGISTRADAS TSPIM 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'8','4','Herramientas, máquinas y equipos III');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'8','4','Tecnología de la construcción');
+
+--ASIGNATURAS REGISTRADAS TSE 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'9','5','Energias alternativas');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'9','5','Sistemas de distribución eléctrica');
+
+--ASIGNATURAS REGISTRADAS TSP 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'10','1','Ética y relaciones humanas');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'10','1','Introducción penitenciaria');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'10','1','Teorías de la seguridad');
+
+--ASIGNATURAS REGISTRADAS TSAF 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'11','5','Seguros');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'11','5','Banca electrónica y canales de distribución alternativo');
+
+--ASIGNATURAS REGISTRADAS TSCI 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'12','4','Atención prehospitalaria II');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'12','4','Ciencias del Fuego');
+
+--ASIGNATURAS REGISTRADAS TSM 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'13','1','Creación de negocios');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'13','1','Seguridad industrial y salud ocupacional');
+
+--ASIGNATURAS REGISTRADAS TST 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'14','1','Informática Tributaria');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'14','1','Contabilidad mercantil');
+
+--ASIGNATURAS REGISTRADAS TSCO 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'15','6','Doctrina policial I');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'15','6','Seguridad humana y seguridad ciudadana');
+
+--ASIGNATURAS REGISTRADAS TSPRL 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'16','2','Electricidad, magnetismo y radiación');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'16','2','Estadística y probabilidades');
+
+--ASIGNATURAS REGISTRADAS TSGPHC 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'17','1','Ofimática');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'17','1','Patrimonio material e inmaterial');
+
+--ASIGNATURAS REGISTRADAS TPRA 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'18','2','Dirección de fotografía');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'18','2','Técnicas de realización audiovisual');
+
+--ASIGNATURAS REGISTRADAS TSMCI 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'19','2','Gestión de la seguridad industrial');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'19','2','Electrónica digital');
+
+--ASIGNATURAS REGISTRADAS TSMIN 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'20','1','Reparación de elemntos industriales');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'20','1','Atomatización industrial');
+
+--ASIGNATURAS REGISTRADAS TSMM 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'21','2','Metalmecánica');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'21','2','Soldadura');
+
+--ASIGNATURAS REGISTRADAS TSAIPT 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'22','1','Redes de datos I');
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'22','1','Sistemas Operativos I');
+
+--ASIGNATURAS REGISTRADAS EC 1--
+INSERT INTO `asignatura`(`horas_semanales`, `id_asignatura`, `id_carrera`, `id_ciclo`, `nombre_asignatura`) VALUES ('2',NULL,'23','1','Excel Intermedio');
+
 --- Periodos academicos---
 INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`) VALUES ('2024-12-31', '1', '2024-01-01', 'Periodo 2024');
 INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`)  VALUES ('2025-12-31', '2', '2025-01-01', 'Periodo 2025');
 INSERT INTO `periodo`(`fin_periodo`, `id_periodo`, `inicio_periodo`, `nombre_periodo`)  VALUES ('2026-12-31', '3', '2026-01-01', 'Periodo 2026');
 
 --JORNADAS ACADEMICAS ---
-INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('1', 'Jornada Matutina');
-INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('2', 'Jornada Vespertina');
-INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('3', 'Jornada Nocturna');
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('1', 'Matutina');
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('2', 'Vespertina');
+INSERT INTO `jornada`(`id_jornada`, `descrip_jornada`)  VALUES ('3', 'Nocturna');
 
 INSERT INTO `distributivo` (`id_distributivo`, `id_periodo`, `id_persona`, `estado`) VALUES (NULL, '1', '1', 'Aceptado');
 INSERT INTO `distributivo` (`id_distributivo`, `id_periodo`, `id_persona`, `estado`) VALUES (NULL, '2', '2', 'Aceptado');
