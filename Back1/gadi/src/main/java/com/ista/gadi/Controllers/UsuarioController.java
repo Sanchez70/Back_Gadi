@@ -2,45 +2,40 @@ package com.ista.gadi.Controllers;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ista.gadi.Entity.Usuario;
 import com.ista.gadi.Services.UsuarioService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
 public class UsuarioController {
+	private static final Logger logger = LoggerFactory.getLogger(UsuarioController.class);
+
 	@Autowired
 	private UsuarioService usuarioService;
-	
+
 	@GetMapping("/usuario")
-	public List<Usuario> index(){
+	public List<Usuario> index() {
 		return usuarioService.findAll();
 	}
-	
+
 	@GetMapping("/usuario/{id}")
 	public Usuario show(@PathVariable Long id) {
 		return usuarioService.findbyId(id);
 	}
-	
+
 	@GetMapping("/usuario/persona/{idPersona}")
-    public Usuario findByPersonaId(@PathVariable Long idPersona) {
-        return usuarioService.findByIdPersona(idPersona);
-    }
-	
+	public Usuario findByPersonaId(@PathVariable Long idPersona) {
+		return usuarioService.findByIdPersona(idPersona);
+	}
+
 	@PostMapping("/usuario")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario create(@RequestBody Usuario usuario) {
@@ -52,16 +47,21 @@ public class UsuarioController {
 	public Usuario update(@RequestBody Usuario usuario, @PathVariable Long id) {
 		Usuario usuarioActual = usuarioService.findbyId(id);
 
-		// Verificar_si la_contraseña ha_cambiado
-		if (usuario.getContrasena() != null && !usuario.getContrasena().equals(usuarioActual.getContrasena())) {
-			// Encriptar_la_contraseña
-			usuarioActual.setContrasena(BCrypt.hashpw(usuario.getContrasena(), BCrypt.gensalt()));
+		if (usuarioActual == null) {
+			return null;
 		}
+
+		if (usuario.getContrasena() != null && !usuario.getContrasena().equals(usuarioActual.getContrasena())) {
+			usuarioActual.setContrasena(BCrypt.hashpw(usuario.getContrasena(), BCrypt.gensalt()));
+			logger.info("Contraseña Encriptada: " + usuarioActual.getContrasena());
+		}
+
 		usuarioActual.setUsuario(usuario.getUsuario());
 		usuarioActual.setCarrera(usuario.getCarrera());
+		logger.info("Usuario Guardado: " + usuarioService.save(usuarioActual));
 		return usuarioService.save(usuarioActual);
 	}
-	
+
 	@DeleteMapping("/usuario/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {

@@ -13,39 +13,37 @@ import com.ista.gadi.Entity.Usuario;
 @Service
 public class Usuariolmpl implements UsuarioService {
 
-	@Autowired
-	private I_Usuario_Dao usuarioDao;
+    @Autowired
+    private I_Usuario_Dao usuarioDao;
 
-	@Override
-	@Transactional(readOnly = true)
-	public List<Usuario> findAll() {
-		return (List<Usuario>) usuarioDao.findAll();
-	}
+    @Override
+    @Transactional(readOnly = true)
+    public List<Usuario> findAll() {
+        return (List<Usuario>) usuarioDao.findAll();
+    }
 
-	@Override
-	public Usuario save(Usuario usuario) {
-		if (usuario.getContrasena() != null) {
-			usuario.setContrasena(BCrypt.hashpw(usuario.getContrasena(), BCrypt.gensalt()));
-		}
-		return usuarioDao.save(usuario);
-	}
+    @Override
+    public Usuario save(Usuario usuario) {
+        if (usuario.getContrasena() != null && !usuario.getContrasena().startsWith("$2a$")) {
+            usuario.setContrasena(BCrypt.hashpw(usuario.getContrasena(), BCrypt.gensalt()));
+        }
+        return usuarioDao.save(usuario);
+    }
 
-	@Override
-	@Transactional(readOnly = true)
-	public Usuario findbyId(Long id) {
-		return usuarioDao.findById(id).orElse(null);
-	}
+    @Override
+    @Transactional(readOnly = true)
+    public Usuario findbyId(Long id) {
+        return usuarioDao.findById(id).orElse(null);
+    }
 
-	@Override
-	public void delete(Long id) {
-		usuarioDao.deleteById(id);
+    @Override
+    public void delete(Long id) {
+        usuarioDao.deleteById(id);
+    }
 
-	}
-
-	@Override
-	@Transactional(readOnly = true)
-	public Usuario findByIdPersona(Long idPersona) {
-		return usuarioDao.findByIdPersona(idPersona).orElse(null);
-	}
-
+    @Override
+    @Transactional(readOnly = true)
+    public Usuario findByIdPersona(Long idPersona) {
+        return usuarioDao.findByIdPersona(idPersona).orElse(null);
+    }
 }
