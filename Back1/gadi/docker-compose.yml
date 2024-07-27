@@ -1,0 +1,56 @@
+version: "3"
+services:
+  api-spring:
+    image: kevin704/gadi-back-produccion:1.0.0
+    networks:
+      - net-cloud
+    container_name: gadi-back-produccion
+    depends_on:
+      - mysql_gadi
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_gadi:3306/gadi_bd?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=mysqluser
+      - SPRING_DATASOURCE_PASSWORD=secret
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
+      - SPRING_JPA_SHOW_SQL=false
+      - SPRING_DATASOURCE.CACHEPREPSTMTS=false
+    ports:
+      - 9100:8081
+    restart: always
+  
+  mysql_gadi:
+    image: mysql:8
+    networks:
+      - net-cloud
+    container_name: mysql_gadi
+    ports:
+      - 3308:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=gadi_bd
+      - MYSQL_USER=mysqluser
+      - MYSQL_PASSWORD=secret
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./mysql-conf:/etc/mysql/conf.d
+      - mysql-data:/var/lib/mysql
+    restart: always
+
+  gadi-front-produccion:
+    image: kevin704/gadi-front-produccion:1.0.0
+    networks:
+      - net-cloud
+    container_name: gadi-front-produccion
+    ports:
+      - 9099:80
+    depends_on:
+      - api-spring
+    restart: always
+
+
+networks:
+  net-cloud:
+
+volumes:
+  mysql-data:
+ 

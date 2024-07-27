@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ista.gadi.Entity.Asignatura;
 import com.ista.gadi.Services.AsignaturaService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class AsignaturaController {

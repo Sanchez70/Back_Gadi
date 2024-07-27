@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.ista.gadi.Entity.Enviroment;
 import com.ista.gadi.Entity.UsuarioRol;
 import com.ista.gadi.Services.UsuarioRolService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class UsuarioRolController {

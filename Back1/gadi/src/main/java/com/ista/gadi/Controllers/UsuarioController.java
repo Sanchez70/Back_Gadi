@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import com.ista.gadi.Entity.Enviroment;
 import com.ista.gadi.Entity.Usuario;
 import com.ista.gadi.Services.UsuarioService;
 
-@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
 public class UsuarioController {

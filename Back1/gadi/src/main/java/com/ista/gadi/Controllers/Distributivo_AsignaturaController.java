@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ista.gadi.Entity.Distributivo_Asignatura;
+import com.ista.gadi.Entity.Enviroment;
 import com.ista.gadi.Services.Distributivo_AsignaturaService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class Distributivo_AsignaturaController {

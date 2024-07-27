@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ista.gadi.Entity.Actividad;
+import com.ista.gadi.Entity.Enviroment;
 import com.ista.gadi.Services.ActividadService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class ActividadController {
